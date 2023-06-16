@@ -9,8 +9,8 @@ class ScoreViewModel: ObservableObject{
 
     init(winnerName: String, score: Int)
     {
-        winnerTitle = "The Winner is " + winnerName + "!"
-        scoreTitle = "Score : \(score)"
+        winnerTitle = "Our  Winner is " + winnerName + "!"
+        scoreTitle = "The Highest Score : \(score)"
     }
     
     func backTomMenu(){
