@@ -40,13 +40,6 @@ struct GameView: View {
                         }
                         Spacer()
                         
-                        Image("logo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 80, height: 80 , alignment: .center)
-                            .padding(35)
-                        
-                        Spacer()
                         
                         VStack {
                             Text("Robot")
@@ -77,25 +70,6 @@ struct GameView: View {
                             0
                         }
                         Spacer()
-                        
-                        Image("logo")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 60, height: 60)
-                        
-                        Spacer()
-                        
-                        VStack(spacing: 4.0) {
-                            Text(viewModel.playerName)
-                                .font(.headline)
-                                .padding(.bottom, 2)
-                            Text("\(viewModel.playerScore)")
-                                .font(.largeTitle)
-                        }
-                        .alignmentGuide(.leading) { _ in
-                            0
-                        }
-                        Spacer()
                     }
                 }
                 .foregroundColor(.white)
@@ -108,7 +82,7 @@ struct GameView: View {
                     Spacer()
                     
                     VStack {
-                        Image("timer")
+                        Image(systemName: "timer")
                             .resizable()
                             .frame(width: 80, height: 80)
                         Text("\(viewModel.gameCount)")

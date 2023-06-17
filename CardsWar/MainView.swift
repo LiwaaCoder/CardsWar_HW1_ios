@@ -1,22 +1,20 @@
-//
-//  MainView.swift
-//  WarGame
-//
-//  Created by Student21 on 08/06/2023.
-//
-
 import SwiftUI
 
 struct MainView: View {
-    @EnvironmentObject var locationManager : LocationManager
+    @EnvironmentObject var locationManager: LocationManager
     @StateObject var viewModel = MainViewModel()
    
     var body: some View {
-        if !viewModel.isLinkActive{
-            UserNameInput(viewModel: viewModel)
-        }  else{
-            EarthMark(viewModel: viewModel).environmentObject(locationManager)
-        }   }
+        ZStack { // Add a ZStack to place the background behind the view
+            Color.blue // Set the background color here
+            
+            if !viewModel.isLinkActive {
+                UserNameInput(viewModel: viewModel)
+            } else {
+                EarthMark(viewModel: viewModel).environmentObject(locationManager)
+            }
+        }
+    }
 }
 
 struct MainView_Previews: PreviewProvider {

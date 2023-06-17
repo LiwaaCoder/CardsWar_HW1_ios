@@ -23,7 +23,7 @@ struct EarthMark: View {
                     if viewModel.showLocation{
                         
                         //fix that
-                        Text("Your Location: [\(locationManager.location?.coordinate.latitude ?? 0.0), \(locationManager.location?.coordinate.longitude ?? 0.0)]")
+                        Text("Your Exact Location: [\(locationManager.location?.coordinate.latitude ?? 0.0), \(locationManager.location?.coordinate.longitude ?? 0.0)]")
                             .frame(maxWidth: .infinity)
                         
                         HStack{
@@ -57,7 +57,7 @@ struct EarthMark: View {
                             RoundedRectangle(cornerRadius: 10)
                                 .foregroundColor(Color.blue)
                                 .frame(width: 150, height: 50)
-                            Text("Start Play")
+                            Text("Start To Play")
                                 .foregroundColor(Color.white)
                                 .bold()
                         }

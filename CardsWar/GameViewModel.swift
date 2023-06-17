@@ -123,6 +123,14 @@ class GameViewModel: ObservableObject{
         }
     }
     
+    
+      func decrementGameCount() {
+          gameCount -= 1
+          if gameCount == 0 {
+              // Perform any additional actions when the gameCount reaches 0
+          }
+      }
+    
     private func getWinner() {
         if playerScore > houseScore {
             winner = playerName
